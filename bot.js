@@ -1,5 +1,6 @@
 // ===== BOT COMMANDS BODY ====
 
+const keepAlive = require("./server")
 
 const { Client, Intents } = require('discord.js');
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
@@ -48,5 +49,6 @@ client.on('interactionCreate', async interaction => {
   }
 });
 
+keepAlive();
 client.login(token);
 
